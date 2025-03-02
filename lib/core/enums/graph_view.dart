@@ -1,0 +1,1 @@
+enum GraphView { ebitda, revenue }
