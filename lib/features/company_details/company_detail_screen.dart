@@ -127,7 +127,9 @@ class _CompanyDetailScreenState extends State<CompanyDetailScreen>
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         children: [
                           const SizedBox(height: 12),
-                          const CompanyFinancialsView(),
+                          CompanyFinancialsView(
+                            financials: state.companyDetail.financials,
+                          ),
                           const SizedBox(height: 12),
                           IssuerDetailsView(company: state.companyDetail),
                           const SizedBox(height: 16),
