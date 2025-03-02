@@ -12,6 +12,8 @@ import 'package:tap_bonds/features/company_list/bloc/company_list_event.dart';
 import 'package:tap_bonds/features/company_list/bloc/company_list_state.dart';
 import 'package:tap_bonds/shared/widgets/loading_indicator.dart';
 
+import '../../shared/widgets/content_container.dart';
+
 class CompanyListScreen extends StatefulWidget {
   const CompanyListScreen({super.key});
 
@@ -44,16 +46,8 @@ class _CompanyListScreenState extends State<CompanyListScreen> {
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
               ),
-              Container(
+              ContentContainer(
                 height: 42,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(
-                    width: 0.5,
-                    color: const Color(0xffe5e7eb),
-                  ),
-                  color: Colors.white,
-                ),
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: Row(
                   children: [
@@ -90,15 +84,7 @@ class _CompanyListScreenState extends State<CompanyListScreen> {
                 ),
               ),
               Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      width: 0.5,
-                      color: const Color(0xffe5e7eb),
-                    ),
-                    color: Colors.white,
-                  ),
+                child: ContentContainer(
                   child: BlocBuilder<CompanyListBloc, CompanyListState>(
                     builder: (context, state) {
                       if (state is CompanyListLoading) {
