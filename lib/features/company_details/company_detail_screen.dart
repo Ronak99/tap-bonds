@@ -11,14 +11,14 @@ import 'package:tap_bonds/shared/widgets/loading_indicator.dart';
 
 import 'widgets/pros_and_cons_view.dart';
 
-class CompanyDetailScreenAlt extends StatefulWidget {
-  const CompanyDetailScreenAlt({super.key});
+class CompanyDetailScreen extends StatefulWidget {
+  const CompanyDetailScreen({super.key});
 
   @override
-  _CompanyDetailScreenAltState createState() => _CompanyDetailScreenAltState();
+  _CompanyDetailScreenState createState() => _CompanyDetailScreenState();
 }
 
-class _CompanyDetailScreenAltState extends State<CompanyDetailScreenAlt>
+class _CompanyDetailScreenState extends State<CompanyDetailScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
