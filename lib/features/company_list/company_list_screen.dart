@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -206,6 +207,7 @@ class _CompanyListScreenState extends State<CompanyListScreen> {
         return GestureDetector(
           behavior: HitTestBehavior.translucent,
           onTap: () => {
+            HapticFeedback.mediumImpact(),
             Navigator.push(
               context,
               MaterialPageRoute(
