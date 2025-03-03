@@ -6,7 +6,9 @@ import '../models/company_detail.dart';
 
 @injectable
 class ApiService {
-  final Dio _dio = Dio();
+  final Dio _dio;
+
+  ApiService(this._dio);
 
   Future<List<Company>> getCompanies() async {
     try {
