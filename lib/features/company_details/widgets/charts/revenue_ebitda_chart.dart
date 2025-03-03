@@ -187,12 +187,21 @@ class RevenueEbitdaChart extends StatelessWidget {
               ),
             ],
           ),
-          Positioned(
-            left: leftReservedSize + barWidth * 4 + ((barWidth * 3) / 2),
-            top: 0,
-            bottom: 20,
-            child: SizedBox(
-              width: barWidth * 3,
+          LayoutBuilder(builder: (context, constraints) {
+            double singleBarWidth =
+                (constraints.maxWidth - leftReservedSize) / 12;
+
+            double viewWidth = singleBarWidth * 2;
+
+            double offsetFromLeft = leftReservedSize + singleBarWidth * 3;
+
+            return Container(
+              width: viewWidth,
+              margin: EdgeInsets.only(
+                left: offsetFromLeft,
+                bottom: 20,
+              ),
+              height: double.infinity,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -233,8 +242,8 @@ class RevenueEbitdaChart extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-          ),
+            );
+          })
         ],
       ),
     );
