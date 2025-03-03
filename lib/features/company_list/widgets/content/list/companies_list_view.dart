@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tap_bonds/core/models/company.dart';
+import 'package:tap_bonds/core/models/company/company.dart';
 import 'package:tap_bonds/core/services/api_service.dart';
 import 'package:tap_bonds/features/company_details/bloc/company_detail_bloc.dart';
 import 'package:tap_bonds/features/company_details/company_detail_screen.dart';

@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tap_bonds/core/models/company.dart';
+import 'package:tap_bonds/core/models/company/company.dart';
 import 'package:tap_bonds/core/services/api_service.dart';
 
 import './company_list_event.dart';

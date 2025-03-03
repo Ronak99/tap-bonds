@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tap_bonds/core/models/company.dart';
+import 'package:tap_bonds/core/models/company/company.dart';
 
 class CompanyListItem extends StatelessWidget {
   final Company company;

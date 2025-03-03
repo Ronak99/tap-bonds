@@ -1,4 +1,4 @@
-import 'package:tap_bonds/core/models/company.dart';
+import 'package:tap_bonds/core/models/company/company.dart';
 
 abstract class CompanyListState {}
 

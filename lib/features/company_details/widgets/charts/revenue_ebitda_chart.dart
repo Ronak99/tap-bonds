@@ -2,7 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:r_dotted_line_border/r_dotted_line_border.dart';
 import 'package:tap_bonds/core/enums/graph_view.dart';
-import 'package:tap_bonds/core/models/company_detail.dart';
+import 'package:tap_bonds/core/models/company_detail/company_detail.dart';
 import 'package:tap_bonds/utils/utils.dart';
 
 class RevenueEbitdaChart extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:tap_bonds/core/models/company_detail.dart';
+import 'package:tap_bonds/core/models/company_detail/company_detail.dart';
 import 'package:tap_bonds/shared/widgets/content_container.dart';
 
 class IssuerDetailsView extends StatelessWidget {
