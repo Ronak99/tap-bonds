@@ -1,7 +1,9 @@
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
 import '../models/company.dart';
 import '../models/company_detail.dart';
 
+@injectable
 class ApiService {
   final Dio _dio = Dio();
 

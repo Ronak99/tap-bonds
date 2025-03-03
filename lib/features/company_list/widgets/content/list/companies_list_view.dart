@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tap_bonds/core/models/company.dart';
 import 'package:tap_bonds/core/services/api_service.dart';
 import 'package:tap_bonds/features/company_details/bloc/company_detail_bloc.dart';
-import 'package:get/get.dart';
 import 'package:tap_bonds/features/company_details/company_detail_screen.dart';
 import 'package:tap_bonds/features/company_list/widgets/content/list/company_list_item.dart';
+import 'package:tap_bonds/locator.dart';
 
 class CompaniesListView extends StatelessWidget {
   final List<Company> companies;
@@ -41,7 +41,7 @@ class CompaniesListView extends StatelessWidget {
               MaterialPageRoute(
                 builder: (context) => BlocProvider(
                   create: (context) => CompanyDetailBloc(
-                    apiService: Get.find<ApiService>(),
+                    apiService: locator<ApiService>(),
                   ),
                   child: const CompanyDetailScreen(),
                 ),
