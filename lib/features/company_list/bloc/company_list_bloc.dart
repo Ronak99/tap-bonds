@@ -42,10 +42,9 @@ class CompanyListBloc extends Bloc<CompanyListEvent, CompanyListState> {
     final searchTerms = event.query.toLowerCase().trim().split(' ');
 
     final filteredCompanies = _allCompanies.where((company) {
-      return searchTerms.any((term) {
+      return searchTerms.every((term) {
         return company.companyName.toLowerCase().contains(term) ||
-            company.isin.toLowerCase().contains(term) ||
-            company.tags.any((tag) => tag.toLowerCase().contains(term));
+            company.isin.toLowerCase().contains(term);
       });
     }).toList();
 
