@@ -12,6 +12,13 @@ class CompanyListLoaded extends CompanyListState {
   CompanyListLoaded(this.companies);
 }
 
+class CompanySearchResult extends CompanyListState {
+  final List<Company> companies;
+  final List<String> searchTerms;
+
+  CompanySearchResult(this.companies, this.searchTerms);
+}
+
 class CompanyListError extends CompanyListState {
   final String message;
 
