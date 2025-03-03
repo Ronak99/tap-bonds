@@ -4,6 +4,7 @@ import 'package:tap_bonds/core/enums/graph_view.dart';
 import 'package:tap_bonds/core/models/company_detail/company_detail.dart';
 import 'package:tap_bonds/features/company_details/widgets/charts/revenue_ebitda_chart.dart';
 import 'package:tap_bonds/shared/widgets/content_container.dart';
+import 'package:tap_bonds/theme/colors.dart';
 
 class CompanyFinancialsView extends StatefulWidget {
   final Financials financials;
@@ -43,7 +44,7 @@ class _CompanyFinancialsViewState extends State<CompanyFinancialsView> {
                     fontWeight: FontWeight.w600,
                     fontSize: 10,
                     letterSpacing: 1,
-                    color: Color(0xffA3A3A3),
+                    color: subtleGreyColor,
                   ),
                 ),
                 Container(

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:r_dotted_line_border/r_dotted_line_border.dart';
 import 'package:tap_bonds/core/enums/graph_view.dart';
 import 'package:tap_bonds/core/models/company_detail/company_detail.dart';
+import 'package:tap_bonds/theme/colors.dart';
 import 'package:tap_bonds/utils/utils.dart';
 
 class RevenueEbitdaChart extends StatelessWidget {
@@ -70,7 +71,7 @@ class RevenueEbitdaChart extends StatelessWidget {
                                 child: Text(
                                   ebitdaData[index].month.toString()[0],
                                   style: const TextStyle(
-                                    color: Color(0xffa3a3a3),
+                                    color: subtleGreyColor,
                                     fontSize: 8,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -114,7 +115,7 @@ class RevenueEbitdaChart extends StatelessWidget {
                                   letterSpacing: .2,
                                   color: index % 2 != 0
                                       ? Colors.transparent
-                                      : const Color(0xffa3a3a3),
+                                      : subtleGreyColor,
                                 ),
                               ),
                             );
@@ -130,7 +131,7 @@ class RevenueEbitdaChart extends StatelessWidget {
                       getDrawingVerticalLine: (value) {
                         if (value == 0.3345) {
                           return const FlLine(
-                            color: Color(0xffa3a3a3),
+                            color: subtleGreyColor,
                             dashArray: [5],
                             strokeWidth: 0.6,
                           );
@@ -144,7 +145,7 @@ class RevenueEbitdaChart extends StatelessWidget {
                         return FlLine(
                           color: index % 2 != 0
                               ? const Color(0xfff5f5f5)
-                              : const Color(0xffa3a3a3),
+                              : subtleGreyColor,
                           strokeWidth: 0.6,
                         );
                       },
@@ -202,7 +203,7 @@ class RevenueEbitdaChart extends StatelessWidget {
                       '2024',
                       style: TextStyle(
                         fontSize: 8,
-                        color: Color(0xffa3a3a3),
+                        color: subtleGreyColor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -214,7 +215,7 @@ class RevenueEbitdaChart extends StatelessWidget {
                       border: RDottedLineBorder(
                         left: const BorderSide(
                           width: .6,
-                          color: Color(0xffa3a3a3),
+                          color: subtleGreyColor,
                         ),
                       ),
                     ),
@@ -225,7 +226,7 @@ class RevenueEbitdaChart extends StatelessWidget {
                       '2025',
                       style: TextStyle(
                         fontSize: 8,
-                        color: Color(0xffa3a3a3),
+                        color: subtleGreyColor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
