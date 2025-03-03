@@ -55,8 +55,7 @@ class _CompanyDetailScreenState extends State<CompanyDetailScreen>
                   toolbarHeight: 76,
                   title: Container(
                     height: 76,
-                    width:
-                        double.infinity, // Make the container take full width
+                    width: double.infinity,
                     alignment: Alignment.centerLeft,
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: const CustomBackButton(),
@@ -64,7 +63,6 @@ class _CompanyDetailScreenState extends State<CompanyDetailScreen>
                   pinned: true,
                   floating: false,
                   forceElevated: innerBoxIsScrolled,
-                  // Remove bottom padding
                   bottom: PreferredSize(
                     preferredSize: Size.zero,
                     child: Container(),
@@ -76,7 +74,7 @@ class _CompanyDetailScreenState extends State<CompanyDetailScreen>
                     child: LoadingIndicator(),
                   ),
 
-                // 2. Intro View
+                // Top level metrics view from Figma.
                 if (state is CompanyDetailLoaded)
                   SliverToBoxAdapter(
                     child: TopLevelMetrics(
@@ -87,6 +85,7 @@ class _CompanyDetailScreenState extends State<CompanyDetailScreen>
                     ),
                   ),
 
+                // Tab BArs
                 if (state is CompanyDetailLoaded)
                   SliverPersistentHeader(
                     delegate: _SliverAppBarDelegate(
@@ -117,7 +116,7 @@ class _CompanyDetailScreenState extends State<CompanyDetailScreen>
               ];
             },
 
-            // 4. Tab Bar Views
+            // Tab Bar children
             body: state is CompanyDetailLoaded
                 ? TabBarView(
                     controller: _tabController,
@@ -136,6 +135,7 @@ class _CompanyDetailScreenState extends State<CompanyDetailScreen>
                         ],
                       ),
 
+                      // Second Tab View
                       ListView(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         children: [
