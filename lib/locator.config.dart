@@ -8,6 +8,7 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:dio/dio.dart' as _i361;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:tap_bonds/core/services/api_service.dart' as _i7;
@@ -23,7 +24,7 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i7.ApiService>(() => _i7.ApiService());
+    gh.factory<_i7.ApiService>(() => _i7.ApiService(gh<_i361.Dio>()));
     return this;
   }
 }
