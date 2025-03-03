@@ -9,10 +9,8 @@ class CompanyListViewModel {
   final TextEditingController searchController = TextEditingController();
 
   CompanyListViewModel(this.context) {
-    // Setup search listener
     searchController.addListener(_onSearchChanged);
 
-    // Initial load of companies
     _fetchCompanies();
   }
 
