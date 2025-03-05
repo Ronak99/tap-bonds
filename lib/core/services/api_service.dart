@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:tap_bonds/core/models/company_detail/company_detail.dart';
 import '../models/company/company.dart';
-import '../models/company_detail.dart';
 
 @injectable
 class ApiService {
